@@ -1,0 +1,31 @@
+<%- include('./partials/header.ejs') %>
+
+<%- include('./partials/navigationUsuarioAdministrador.ejs') %>
+    <title>Consumo de agua</title>
+</head>
+<body>
+    <div class="container form-condimodeagua">
+        <div class="row">
+            <% if(i=0, result1.recordset.length) { %>
+                <div  eblclass="container">    
+                  <!--Editar-->
+                    <form action="/Configuracion/Editar/Actualizar" onsubmit="verificarPasswords();" method="POST" >
+                      <h2>Editar</h2>
+                      <input type="text" name="ID" hidden value="<%=  result1.recordset[i].ID %>">
+                      <input type="text" name="Nombre" placeholder="Nombre Completo" value="<%=  result1.recordset[i].Nombre %>" required autofocus>
+                      <input type="text" name="ApellidoPa" placeholder="Apelllido paterno" value="<%= result1.recordset[i].ApellidoPa %>" required>
+                      <input type="text" name="ApellidoMa" placeholder="Apelllido Materno" value="<%= result1.recordset[i].ApellidoMa %>" required>
+                      <input type="text" name="Direccion"  placeholder="Escribir tu Direccion" value="<%= result1.recordset[i].Direccion %>" required>
+                      <input type="text" name="NumTel"  placeholder="Numero de Telefono" value="<%= result1.recordset[i].NumTel %>" required>
+                      <input type="text" name="Sexo"  placeholder="Sexo" value="<%= result1.recordset[i].Sexo %>" required>
+                      <input type="password" name="Password" id="pass1"  placeholder="Escribir Contraseña" value="<%= result1.recordset[i].Password %>" required>
+                      <input type="password"  id="pass2"  placeholder="Escribir Contraseña" value="<%= result1.recordset[i].Password %>" required>
+                      <a class="btn_Acciones_Save"><button type="submit" class="btn_Acciones_Save">GUARDAR</button></a>
+                      <a class="btn_Acciones_Delete" href="/Configuracion" id="" type="submit" >Cancelar</a>
+                    </form>
+            </div>
+            <% } %>
+        </div>
+    </div>
+
+<%- include('./partials/footer.ejs') %>

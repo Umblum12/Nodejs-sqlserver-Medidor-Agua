@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Register Consumo de agua</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/estilos.css">
+</head>
+<body>
+    <!-- El main -->
+        <main>
+            <!-- Contenedor de todo -->
+            <div class="contenedor__todo">
+                <!-- Contenedor caja trasera -->
+                <div class="caja__trasera">
+                    <!-- Contenedor caja trasera Inicio de sesión -->
+                    <div class="caja__trasera-login">
+                        <!-- Titulo de caja trasera Inicio de sesión -->
+                        <h3>¿Ya tienes una cuenta?</h3>
+                        <!-- Contenedor caja trasera Texto -->
+                        <p>Inicia sesión para entrar en la página</p>
+                        <!-- Contenedor caja trasera Boton-->
+                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                    </div>
+                    <div class="caja__trasera-register">
+                        <h3>¿Aún no tienes una cuenta?</h3>
+                        <p>Regístrate para que puedas iniciar sesión</p>
+                        <button id="btn__registrarse">Regístrarse</button>
+                    </div>
+                </div>
+
+                <!--Formulario de Login y registro-->
+                <div class="contenedor__login-register">
+                    <!--Login-->
+                    <form action="/Login" class="formulario__login" method="POST">
+                        <h2>Iniciar Sesión</h2>
+                        <input type="text" name="Nombre" placeholder="Escribir Nombre" >
+                        <input type="password" name="Password" placeholder="Contraseña" >
+                        <button type="submit" >Entrar</button>
+                    </form>
+
+                    <!--Register-->
+                    <form action="/Registrar" class="formulario__register" onsubmit="verificarPasswords();" method="POST" >
+                        <h2>Regístrarse</h2>
+                        <input type="text" name="Nombre" placeholder="Nombre completo"class="form-control"  autofocus>
+                        <input type="text" name="ApellidoPa" placeholder="Apelllido paterno" >
+                        <input type="text" name="ApellidoMa" placeholder="Apelllido Materno" >
+                        <input type="text" name="NumTel" class="form-control" placeholder="Numero de Telefono" >
+                        <input type="text" name="Direccion" class="form-control" placeholder="Escribir tu Direccion" >
+                        <input type="text" name="Sexo" class="form-control" placeholder="Sexo" >
+                        <input type="password" name="Password" id="pass1" class="form-control" placeholder="Escribir Contraseña" >
+                        <input type="password" name="Password2" id="pass2" class="form-control" placeholder="Escribir Contraseña" >
+                        <button id="register" class="btn btn-lg btn-info btn-block" type="submit" >Regístrarse</button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+        <div id="msg"></div>
+ 
+        <!-- Mensajes de Verificación -->
+        <div id="error" class="alert alert-danger ocultar" role="alert">
+            Las Contraseñas no coinciden, vuelve a intentar !
+        </div>
+        <div id="ok" class="alert alert-success ocultar" role="alert">
+            Las Contraseñas coinciden ! (Procesando formulario ... )
+        </div>
+        <!-- Fin Mensajes de Verificación -->
+
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+        <% if(typeof alert != "undefined") { %>
+    
+            <script>
+                swal.fire({
+                    title:'<%= alertTitle %>',
+                    text:'<%= alertMessage %>',
+                    icon:'<%= alertIcon %>',
+                    showConfigButton: <%=showConfirmButton%>,
+                    timer: <%=timer%>
+                }).then(()=>{
+                    window.location='/Login&Register'
+                })
+            </script>
+            <% } %>
+
+        <script src="Js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<%- include('./partials/header.ejs') %>
+
+<%- include('./partials/navigationUsuarioDefault.ejs') %>
+
+    <title>Consumo de agua</title>
+</head>
+<body>
+    <div class="container form-condimodeagua">
+        <div id="Tarifas" class="row">
+            <h1>Tarifas</h1>
+            <p id="TarifaDU">Domesticas Urbanas</p>
+            <div class="card col-md-3 mx-auto my-5 table-responsive" style="width: 40rem;">
+            <table class="table table-sm table-primary table-hover table-bordered ">
+                
+                <caption>Lista de tarifas</caption>
+                <thead class="table-info">
+                  <tr>
+                        <th scope="col">Tipo de Tarifa </th>
+                        <th scope="col">Rango </th>
+                        <th scope="col">Precio </th>     
+                        <th scope="col">Alcantarillado </th>  
+                        <th scope="col">Saneamiento </th>  
+                  </tr>
+                </thead>
+                <tbody>
+                    <% if( i=0, Tarifas.recordset.length) {  %>
+                        <tr>  
+                            <td ><%= Tarifas.recordset[i].tipotarifas %></td>  
+                            <td ><%= Tarifas.recordset[i].Rango %></td>
+                            <td ><%= Tarifas.recordset[i].Precio %></td>
+                            <td ><%= Tarifas.recordset[i].Alcantarillado %></td>
+                            <td ><%= Tarifas.recordset[i].Saneamiento %></td>
+                        </tr>   
+                    <% } %>
+                </tbody>
+              </table>
+            </div>
+            <p id="TarifaCU">Comerciales Urbanas</p>
+            <div class="card col-md-3 mx-auto my-5 table-responsive " style="width: 40rem;">
+            <table class="table table-sm table-primary table-hover table-bordered ">
+                <caption>Lista de tarifas</caption>
+                <thead class="table-info">
+                  <tr>
+                        <th scope="col">Tipo de Tarifa </th>
+                        <th scope="col">Rango </th>
+                        <th scope="col">Precio </th>     
+                        <th scope="col">Alcantarillado </th>  
+                        <th scope="col">Saneamiento </th> 
+                  </tr>
+                </thead>
+                <tbody>
+                    <% if( i=1, Tarifas.recordset.length) {  %>
+                        <tr>  
+                            <td ><%= Tarifas.recordset[i].tipotarifas %></td>  
+                            <td ><%= Tarifas.recordset[i].Rango %></td>
+                            <td ><%= Tarifas.recordset[i].Precio %></td>
+                            <td ><%= Tarifas.recordset[i].Alcantarillado %></td>
+                            <td ><%= Tarifas.recordset[i].Saneamiento %></td>
+                        </tr>   
+                    <% } %>
+                </tbody>
+              </table>
+            </div>
+
+        </div>
+     </div>
+ 
+    <br />
+    <br />
+    <br />
+
+    <br>
+    <br>
+    <br>
+    <br id="Historial">
+    <div class="container form-condimodeagua">
+        <h3>Historial</h3>
+        <div class="row">
+            <div class="card col-md-3 mx-auto my-5 table-responsive" style="width: 40rem;">
+                <table class="table table-sm table-primary table-hover table-bordered">
+                    <caption>Lista de Historial</caption>
+                    <form action="/InformacionTHUsuarioDefault/Historial/ByFecha" method="post">
+                        <thead class="table-info">
+                            <tr> <label id="fecha" for="start">Seleccione Fecha:</label>
+
+                                <input id="infecha" type="date" name="fecha" value="" min="" max="">
+                                <input type="submit" value="Aplicar">
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Estado</th>      
+                            </tr>
+                        </thead>
+                    </form>
+                    <tbody>
+                        <% for(i=0; i < Historial.recordset.length; i++) { %>
+                            <tr>  
+                                <td ><%= Historial.recordset[i].fecha %></td>  
+                                <td ><%= Historial.recordset[i].estado %></td>
+                            </tr>   
+                        <% } %>
+                    </tbody>
+                  </table>
+                </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <%- include('./partials/footer.ejs') %>

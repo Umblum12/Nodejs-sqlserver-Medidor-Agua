@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs') %>
+
+<%- include('./partials/navigationUsuarioAdministrador.ejs') %>
+    <title>Consumo de agua</title>
+</head>
+<body>
+    <div class="container form-condimodeagua">
+        <div class="row">
+                <div  eblclass="container">    
+                  <!--Editar-->
+                    <form action="/Configuracion/Crear/Registrar" onsubmit="verificarPasswords();" method="POST" >
+                      <h2>Crear</h2>
+                      <input type="text" name="id" placeholder="id" value="" required autofocus>
+                      <input type="text" name="nombre" placeholder="Nombre Completo" value="" required >
+                      <input type="text" name="apellidopa" placeholder="Apelllido paterno" value="" required>
+                      <input type="text" name="apellidoma" placeholder="Apelllido Materno" value="" required>
+                      <input type="text" name="direccion"  placeholder="Escribir tu Direccion" value="" required>
+                      <input type="text" name="numtel"  placeholder="Numero de Telefono" value="" required>
+                      <input type="text" name="sexo"  placeholder="Sexo" value="" required>
+                      <input type="password" name="password" id="pass1"  placeholder="Escribir Contraseña" value="" required>
+                      <input type="password"  name="Password2"  placeholder="Escribir Contraseña" value="" required>
+                      <input type="text" name="rango"  placeholder="Rango" value="" required>
+                      <a class="btn_Acciones_Save"><button type="submit" class="btn_Acciones_Save">Crear</button></a>
+                      <a class="btn_Acciones_Delete" href="/Configuracion" id="" type="submit" >Cancelar</a>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+<%- include('./partials/footer.ejs') %>

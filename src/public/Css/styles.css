@@ -1,0 +1,337 @@
+
+
+/*-------------------------------SELECTORES X ETIQUETAS---------------------------------------*/
+
+
+/*cambia el color del texto dentro de la etiqueta <select>*/
+select {
+    color: rgb(0, 75, 187);
+}
+/*-------------------------------AQUI ACABA SELECTORES X ETIQUETAS---------------------------------------*/
+
+/*-------------------------------IDS---------------------------------------*/
+
+
+
+/*Acomodar el id logo a la izquerda*/
+ #logo2{
+    float:left;
+}
+
+/*Dar un margen a el id imagenmedidor*/
+ #imagenmedidor {
+    margin-left: 340px;
+}
+
+/*cambiar color de texto y quitar las decoraciones de el id tb*/
+#tb {
+    color: white;
+    text-decoration: none;
+}
+
+/*Cambiar el color a etiqueta a con id TarifaCU*/
+#TarifaCU {
+    text-align: center;
+    margin-right: -105px;
+    color: white;
+    font-weight: bolder;
+}
+
+/*Cambiar el color a etiqueta a con id TarifaDU*/
+#TarifaDU {
+    text-align: center;
+    margin-right: -105px;
+    color: white;
+    font-weight: bolder;
+}
+
+#Iformacion {
+    float: left;
+}
+
+/*cambia el fondo de color de id  */
+.TablaUsuariosreg td{
+    background-color: #0099ff;
+    font-weight: bolder;
+    padding: 5px 6px;
+}
+
+
+/*cambia el fondo de color de id */
+#UsuariosregAcciones{
+    background-color: aqua;
+}
+
+
+/*-------------------------------AQUI ACABA IDS---------------------------------------*/
+
+/*-------------------------------CLASES---------------------------------------*/
+
+
+
+/* dar un margen a la izquierda y hacer visible */
+div#Usuarios_filter input {
+    margin-left: -50px;
+    visibility: visible;
+}
+
+/* ocultar label */
+div#Usuarios_filter {
+    visibility: hidden;
+}
+
+/* cambiar texto de label a español y hacerlo visible */
+div#Usuarios_filter label:before {
+    content: "Buscar: ";
+    visibility: visible;
+}
+
+/* ocultar label */
+div#Usuarios_length {
+    visibility: hidden;
+}
+
+/* dar un margen a la izquierda y derecha y hacer visible */
+div#Usuarios_length select {
+    margin-left: -35px;
+    margin-right: -44px;
+    visibility: visible;
+}
+
+/* cambiar texto de label a español y hacerlo visible */
+div#Usuarios_length:after {
+    content: "registros";
+    visibility: visible;
+}
+
+/* cambiar texto de label a español y hacerlo visible */
+div#Usuarios_length:before {
+    content: "Mostrar";
+    visibility: visible;
+}
+
+/* cambiar texto de a a español */
+li#Usuarios_next a:before {
+    content: "Siguiente / ";
+}
+
+/* cambiar texto de a a español */
+li#Usuarios_previous a:before {
+    content: "Anterior / ";
+}
+
+.dataTables_info{
+    color: white;
+}
+
+.dataTables_length{
+    color: white;
+}
+
+.dataTables_filter{
+    color: white;
+}
+
+/* le da margen a la tabla de usuarios registrados*/
+.div_table_usuariosreg{
+    color: withe;
+}
+
+.btn_create{
+    display: block;
+    text-align: center;
+}
+
+/*  boton acciones delete hace que se mire como boton */
+.btn_Acciones_Delete{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-width: 10px;
+    padding: 2px 5px;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    display: grid;
+    text-align: center;
+}
+
+/*  boton acciones delete hace que se mire como boton cuando el mouse este sobre el boton */
+.btn_Acciones_Delete:hover {
+    background-color: rgb(190, 0, 0);
+    color: black;
+    font-weight: bold;
+    padding: 2px 5px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*  boton acciones Edit hace que se mire como boton */
+.btn_Acciones_Edit {
+    background-color: rgb(0, 174, 255);
+    color: white;
+    font-weight: bold;
+    border-width: 10px;
+    padding: 2px 5px;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    display: grid;
+    text-align: center;
+}
+
+/*  boton acciones Edit hace que se mire como boton cuando el mouse este sobre el boton */
+.btn_Acciones_Edit:hover {
+    background-color: rgb(100, 174, 255);
+    color: black;
+    font-weight: bold;
+    padding: 2px 5px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+/*  boton acciones Save hace que se mire como boton */
+.btn_Acciones_Save {
+    background-color: rgb(0, 255, 55);
+    color: white;
+    font-weight: bold;
+    border-width: 10px;
+    padding: 2px 5px;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    display: grid;
+    border: none;
+}
+
+/*  boton acciones Save hace que se mire como boton cuando el mouse este sobre el boton */
+.btn_Acciones_Save:hover {
+    background-color: rgb(100, 255, 55);
+    color: black;
+    font-weight: bold;
+    padding: 2px 5px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+
+
+/* Cambiar color de fondo al poner el mouse arriba <a>*/
+.nav0 #Perfil a:hover {
+    background-color:#ffffffab;
+    color: aqua;
+    text-decoration: underline;
+}
+
+/**/
+.nav0 #Perfil ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+
+
+
+/* Cambiar fondo de div y ajustar que la imagen no se repita y que cubra el div*/
+.form-condimodeagua {
+    background-image : url('/assets/imagenes/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Cambiar color de fondo de acercade*/
+.acercade {
+    background-color: blue;
+    margin-right: 45px;
+    padding-bottom: 50px;
+    text-align: right;
+}
+/*Cambiar color de fondo de copy y el pading para que sea mas grande el div*/
+.copy {
+    background-color: rgb(0, 0, 202);
+}
+
+/*colocar el display en inline-block para que todo este junto.*/
+.copy li {
+    display:inline-block;
+    padding-left:3px;
+    padding-right:3px;
+}
+
+/*ajustar margen de lados de clase copy*/
+.copy {
+}
+
+/*Cambiar color a texto de etiqueta a de la calasse copy*/
+.copy a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    
+}
+
+/*le da un margen a lado izquierdo de la calse tb1*/
+.copy .tb1 {
+    margin-left: 370px;
+}
+
+/*Cambiar color a texto de etiqueta a de la calasse copy*/
+.copy p{
+    color:rgb(255, 255, 255);
+}
+
+/*pone el subrayado a la equieta copy cuando pasemos el mouse por arriba*/
+.copy a:hover{
+    color:rgb(156, 149, 252);
+    text-decoration: underline;
+}
+
+/**/
+.nav{
+    margin-top: 40px;
+}
+
+/* dar un margen y cambiar el tipo de fuente al texto y */
+.acercade div ul li {
+    margin-right: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder ;
+}
+
+/*Darle un margen de 150 pixeles y cambiarle el tamaño del texto al label */
+.acercade div label {
+    margin-right: 150px;
+    font-size: large;
+    
+}
+
+/*-------------------------------AQUI ACABA CLASES---------------------------------------*/
+
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
